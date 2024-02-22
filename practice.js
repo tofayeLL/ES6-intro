@@ -42,23 +42,46 @@
 
 /* ----------------------------------------------------------- */
 
+
+
 /* ------practice problem 3-------- */
 // average of numbers in the array
-const averageNumbers = (numbers) => {
-    let sum = 0;
-    let squareNum = [];
-    for (let num of numbers) {
-        let square = Math.pow(num, 2);
-        sum = sum + square;
-        squareNum.push(square);   
-    }
-    // console.log(squareNum);
-    // console.log(sum)
-    const length = squareNum.length;
-    const average = sum / length;
-    return average;
+// const averageNumbers = (numbers) => {
+//     let sum = 0;
+//     let squareNum = [];
+//     for (let num of numbers) {
+//         let square = Math.pow(num, 2);
+//         sum = sum + square;
+//         squareNum.push(square);   
+//     }
+//     // console.log(squareNum);
+//     // console.log(sum)
+//     const length = squareNum.length;
+//     const average = sum / length;
+//     return average;
     
+// }
+
+// const avg = averageNumbers([2, 3, 4, 5, 6]);
+// console.log(avg);
+
+
+
+
+/* -------------------------------------------------------- */
+
+
+/* ---------practice problem 4--------- */
+
+const getMax = (array1, array2) => {
+    // merge two array in one array by use spread operator
+    const mergeArr = [...array1, ...array2];
+    // console.log(mergeArr);
+    // find from array max number
+    const maxNum = Math.max(...mergeArr);
+    return maxNum
+
 }
 
-const avg = averageNumbers([2, 3, 4, 5, 6]);
-console.log(avg);
+const maxNum = getMax([2, 5, 6 ,35, 98, 3, 225], [5, 87, 24, 9, 1, 90, 45]);
+console.log('Get the maximum number from the two array is', maxNum);
